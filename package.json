@@ -1,0 +1,36 @@
+{
+  "name": "enya-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/env-cmd ./node_modules/.bin/nodemon index.js",
+    "dev:migrate": "./node_modules/.bin/env-cmd ./node_modules/.bin/sequelize db:migrate --env development --config ./config/sequelize.js",
+    "lint": "./node_modules/.bin/eslint --format codeframe .",
+    "lint:fix": "./node_modules/.bin/eslint --fix --format codeframe .",
+    "test": "./node_modules/.bin/mocha tests/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danyll39/enya-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danyll39/enya-api/issues"
+  },
+  "homepage": "https://github.com/danyll39/enya-api#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "eslint": "^7.23.0",
+    "nodemon": "^2.0.7",
+    "sinon": "^10.0.0",
+    "sinon-chai": "^3.6.0"
+  }
+}
